@@ -6,10 +6,8 @@
 </head>
 <body>
 
-<?php
-echo "My first PHP script!";
-?>
-
-<h2>i dont think the php is working, because it's a php file</h2>
+SUP <?php echo $_P0ST["Full Name"]; ?><br>
+Email: <?php echo $_POST["email"]; ?><br>
+Major: <?php echo $_POST["major"]; ?><br>
 </body>
-</html>
+</html>;

@@ -6,10 +6,22 @@
 </head>
 <body>
 
-<?php
-    echo "Its working!";
-?>
+<form id="usrform" action="Team03.php" method="post">
+    Name: <br>
+    <input type="text" name="Full Name"><br>
+    Email:<br>
+    <input type="email" name="email"><br>
+    Major:<br>
+    <input type="radio" name="major" value="Computer Science">Computer Science<br>
+    <input type="radio" name="msjor" value="Web Design and Development">Web Design and Development<br>
+    <input type="radio" name="major" value="Computer Information Technology">    Computer Information Technology<br>
+    <input type="radio" name="major" value="Computer Engineering">Computer Engineering<br>
+    <input type="submit">
+</form>
 
-<h2>i dont think the php is working, because it's a php file</h2>
+Comments<br>
+<textarea rows="5" cols="50" name="comment" form="usrform">Did you find what you wanted
+</textarea>
+
 </body>
 </html>
