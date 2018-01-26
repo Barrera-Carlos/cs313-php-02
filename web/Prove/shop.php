@@ -14,7 +14,7 @@
         list-style-type: none
     }
 
-    #ListStyle:nth-child(even){
+    li:nth-child(even){
          background-color: #f2f2f2
     }
     </style>
