@@ -34,7 +34,7 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="../mainPage.html">Home</a></li>
+          <li class="active"><a href="Shop.html">Home</a></li>
           <li><a href="../CS313ProjectPage.html">CS-313</a></li>
         </ul>
       </div>
