@@ -36,10 +36,8 @@ $itemDesctiption = array( "10" => "Gundam nadleeh $12.50", "2"=>"Gundam Exia $15
 "3" =>"Transient Gundam $23.99", "4"=>"Transient Gundam Glacier $23.99", "7"=>" Gundam Vidar 18.50",
  "5"=>"Kimaris vidar $23.99");
 
-$rows = 0;
-$collums = 0;
 
-  if (is_array($_POST['Item'])) {
+ /* if (is_array($_POST['Item'])) {
     echo "<ul id=\"ListStyle\">
     foreach($_POST['Item'] as $value){
 
@@ -48,7 +46,7 @@ $collums = 0;
 
       }
         </ul>"
-  }
+  }*/
 
 
   echo "<table id=\"cartTable\">
