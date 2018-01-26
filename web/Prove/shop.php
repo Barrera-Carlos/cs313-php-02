@@ -38,7 +38,7 @@ $itemDesctiption = array( "10" => "Gundam nadleeh $12.50", "2"=>"Gundam Exia $15
 
 
  if (is_array($_POST['Item'])) {
-    echo "<ul id=\"ListStyle\">";
+    echo "<ul style=\"list-style-type: none\">";
     foreach($_POST['Item'] as $value){
 
         $p = $itemDesctiption[$value];
