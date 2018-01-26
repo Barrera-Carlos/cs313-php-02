@@ -7,8 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="shop.css">
-    <script type="text/javascript" src="Shop.js"></script>
+    <link rel="stylesheet" type="text/css" href="shop.css">
+    <script type="text/javascript" src="shop.js"></script>
 </head>
 <html>
 <body>
@@ -32,13 +32,14 @@
   </nav>
 
 <?php
+/*need to make this into a multi dimensional array to add a total to the shopping cart*/
 $itemDesctiption = array( "10" => "Gundam nadleeh $12.50", "2"=>"Gundam Exia $15.66",
 "3" =>"Transient Gundam $23.99", "4"=>"Transient Gundam Glacier $23.99", "7"=>" Gundam Vidar 18.50",
  "5"=>"Kimaris vidar $23.99");
 
 
- if (is_array($_POST['Item'])) {
-    echo "<ul style=\"list-style-type: none\">";
+if (is_array($_POST['Item'])) {
+    echo "<ul id=\"ListStyle\">";
     foreach($_POST['Item'] as $value){
 
         $p = $itemDesctiption[$value];
@@ -49,7 +50,19 @@ $itemDesctiption = array( "10" => "Gundam nadleeh $12.50", "2"=>"Gundam Exia $15
   }
 
 
-  echo "<table id=\"cartTable\">
+ /*if (is_array($_POST['Item'])) {
+    echo "<ul style=\"list-style-type: none\">";
+    foreach($_POST['Item'] as $value){
+
+        $p = $itemDesctiption[$value];
+        echo "<li>$p</li>";
+
+      }
+        echo "</ul>";
+  }*/
+
+
+  /*echo "<table id=\"cartTable\">
   <tr>
     <th>Firstname</th>
     <th>Lastname</th>
@@ -64,7 +77,7 @@ $itemDesctiption = array( "10" => "Gundam nadleeh $12.50", "2"=>"Gundam Exia $15
     <td>Eve</td>
     <td>Jackson</td>
     <td>94</td>
-  </tr>
+  </tr>*/
 </table>
 "
 ?>

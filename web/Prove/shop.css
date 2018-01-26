@@ -31,11 +31,6 @@ div.desc {
     transform: translate(-50%, -50%);
 }*/
 
-.ListStyle{
-    list-style: none
-}
-
-.ListStyle:nth-child(even){background-color: #f2f2f2}
 
 table {
     border-collapse: collapse;
@@ -48,3 +43,11 @@ th, td {
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
+
+#ListStyle{
+    list-style-type: none
+}
+
+#ListStyle:nth-child(even){
+    background-color: #f2f2f2
+}
