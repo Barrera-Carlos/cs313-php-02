@@ -37,7 +37,7 @@ $itemDesctiption = array( "10" => "Gundam nadleeh $12.50", "2"=>"Gundam Exia $15
  "5"=>"Kimaris vidar $23.99");
 
 
- /* if (is_array($_POST['Item'])) {
+ if (is_array($_POST['Item'])) {
     echo "<ul id=\"ListStyle\">
     foreach($_POST['Item'] as $value){
 
@@ -46,7 +46,7 @@ $itemDesctiption = array( "10" => "Gundam nadleeh $12.50", "2"=>"Gundam Exia $15
 
       }
         </ul>"
-  }*/
+  }
 
 
   echo "<table id=\"cartTable\">
