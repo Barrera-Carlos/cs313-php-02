@@ -8,6 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="shop.css">
+    <script type="text/javascript" src="shopPhp.js"></script>
 
     <style>
     #UlistStyle{
@@ -53,7 +54,7 @@ if (is_array($_POST['Item'])) {
     foreach($_POST['Item'] as $value){
 
         $p = $itemDesctiption[$value];
-        echo "<li id=\"ListStyle\">$p</li>";
+        echo "<li id=\"ListStyle\">$p<button onclick=\"remove()\">Remove this Item</button></li>";
 
       }
         echo "</ul>";
