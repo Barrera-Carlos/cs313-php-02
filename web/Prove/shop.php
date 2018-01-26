@@ -54,7 +54,7 @@ if (is_array($_POST['Item'])) {
     foreach($_POST['Item'] as $value){
 
         $p = $itemDesctiption[$value];
-        echo "<li id=\"ListStyle\">$p<button onclick=\"remove()\">Remove this Item</button></li>";
+        echo "<li id=\"ListStyle\">$p<button onclick=\"remove(this.parentNode)\">Remove this Item</button></li>";
 
       }
         echo "</ul>";
