@@ -23,14 +23,6 @@ div.desc {
     text-align: center;
 }
 
-ul{
-    list-style: none;
-}
-
-li:nth-child(odd){
-    background-color: #f2f2f2;
-}
-
 /* Used to Position Text Over an Image
 .Centered {
     position: absolute;
@@ -38,7 +30,7 @@ li:nth-child(odd){
     left: 50%;
     transform: translate(-50%, -50%);
 }*/
-/*table {
+table {
     border-collapse: collapse;
     width: 100%;
 }
@@ -48,4 +40,4 @@ th, td {
     padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}*/
+tr:nth-child(even){background-color: #f2f2f2}
