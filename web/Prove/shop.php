@@ -69,17 +69,20 @@ $itemDesctiption = array(
 
 if (is_array($_POST['Item'])) {
     $_SESSION["totalPrice"] = 0;
-    $gundamIdNumber = 0;
-    $gundamDescription = 1;
+    $gundamIdNumberLocation = 0;
+    $gundamDescriptionLocation = 1;
+    $gundamPriceLocation = 2;
     $totalPriceVar = 0;
 
     echo "<ul id=\"UlistStyle\">";
     foreach($_POST['Item'] as $value){
         for($row = 0; $row < 6; $row++){
-            if($value == $itemDesctiption[$row][$gundamIdNumber])
+            if($value == $itemDesctiption[$row][$gundamIdNumberLocation])
             {
-                echo "<li id=\"ListStyle\">".$itemDesctiption[$row][$gundamDescription].
+                echo "<li id=\"ListStyle\">".$itemDesctiption[$row][$gundamDescriptionLocation].
                     "<button onclick=\"remove(this.parentNode)\">Remove this Item</button></li>";
+
+                $totalPriceVar += $itemDesctiption[$row][$gundamPriceLocation];
             }
         }
 
@@ -87,7 +90,7 @@ if (is_array($_POST['Item'])) {
         echo "</ul>";
   }
 
-
+echo "<button>".$totalPriceVar."</button>"
 
 ?>
 
