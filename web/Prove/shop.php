@@ -75,12 +75,11 @@ if (is_array($_POST['Item'])) {
 
     echo "<ul id=\"UlistStyle\">";
     foreach($_POST['Item'] as $value){
-        $p = $itemDesctiption[$value];
         for($row = 0; $row < 6; $row++){
             if($value == $itemDesctiption[$row][$gundamIdNumber])
             {
-                echo "<li id=\"ListStyle\">$itemDesctiption[$row][$gundamDescription]
-                <button onclick=\"remove(this.parentNode)\">Remove this Item</button></li>";
+                echo "<li id=\"ListStyle\">".$itemDesctiption[$row][$gundamDescription].
+                    "<button onclick=\"remove(this.parentNode)\">Remove this Item</button></li>";
             }
         }
 
