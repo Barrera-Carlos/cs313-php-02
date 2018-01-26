@@ -31,11 +31,11 @@ div.desc {
     transform: translate(-50%, -50%);
 }*/
 
-ul{
+.ListStyle{
     list-style: none
 }
 
-li:nth-child(even){background-color: #f2f2f2}
+.ListStyle:nth-child(even){background-color: #f2f2f2}
 
 table {
     border-collapse: collapse;
