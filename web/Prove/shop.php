@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <head>
   <title>Cart</title>
@@ -15,7 +19,7 @@
         node.parentNode.removeChild(node);
     }
     </script>
-    
+
     <style>
     #UlistStyle{
         list-style-type: none
@@ -41,62 +45,51 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="Shop.html">Home</a></li>
-          <li><a href="../CS313ProjectPage.html">CS-313</a></li>
+          <li class="active"><a href="Shop.html">Shop</a></li>
+          <li><a href="#">CS-313</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
 <?php
-/*need to make this into a multi dimensional array to add a total to the shopping cart*/
+/*need to make this into a multi dimensional array to add a total to the shopping cart
 $itemDesctiption = array( "10" => "Gundam nadleeh $12.50", "2"=>"Gundam Exia $15.66",
 "3" =>"Transient Gundam $23.99", "4"=>"Transient Gundam Glacier $23.99", "7"=>" Gundam Vidar 18.50",
- "5"=>"Kimaris vidar $23.99");
+ "5"=>"Kimaris vidar $23.99");*/
+
+$itemDesctiption = array(
+        array("10","Gundam nadleeh $12.50",12.50),
+        array("2","Gundam Exia $15.66",15.66),
+        array("3","Transient Gundam $23.99",23.99),
+        array("4","Transient Gundam Glacier $23.99",23.99),
+        array("7"," Gundam Vidar 18.50",18.50),
+        array("5","Kimaris vidar $23.99",23.99));
 
 
 if (is_array($_POST['Item'])) {
+    $_SESSION["totalPrice"] = 0;
+    $gundamIdNumber = 0;
+    $gundamDescription = 1;
+    $totalPriceVar = 0;
+
     echo "<ul id=\"UlistStyle\">";
     foreach($_POST['Item'] as $value){
-
         $p = $itemDesctiption[$value];
-        echo "<li id=\"ListStyle\">$p<button onclick=\"remove(this.parentNode)\">Remove this Item</button></li>";
+        for($row = 0; $row < 6; $row++){
+            if($value == $itemDesctiption[$row][$gundamIdNumber])
+            {
+                echo "<li id=\"ListStyle\">$itemDesctiption[$row][$gundamDescription]
+                <button onclick=\"remove(this.parentNode)\">Remove this Item</button></li>";
+            }
+        }
 
       }
         echo "</ul>";
   }
 
 
- /*if (is_array($_POST['Item'])) {
-    echo "<ul style=\"list-style-type: none\">";
-    foreach($_POST['Item'] as $value){
 
-        $p = $itemDesctiption[$value];
-        echo "<li>$p</li>";
-
-      }
-        echo "</ul>";
-  }*/
-
-
-  /*echo "<table id=\"cartTable\">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-</table>
-"*/
 ?>
 
 </body>
