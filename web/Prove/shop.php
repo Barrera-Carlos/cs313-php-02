@@ -40,33 +40,14 @@ $rows = 0;
 $collums = 0;
 
   if (is_array($_POST['Item'])) {
-    echo "<ul>";
+    echo "<ul id=\"ListStyle\">
     foreach($_POST['Item'] as $value){
-
 
         $p = $itemDesctiption[$value];
          echo "<li>$p</li>";
 
-      /*if(($collums % 3) == 0 || $collums == 0)
-      {
-        $p = $itemDesctiption[$value];
-        echo "<tr> <td>$p</td> \n";
-        $collums += 1;
       }
-      elseif (($collums % 2) == 0) {
-        $p = $itemDesctiption[$value];
-        echo "<td>$p</td> \n";
-        echo "</tr>";
-        $collums += 1;
-      }
-      else{
-        $p = $itemDesctiption[$value];
-        echo "<td>$p</td> \n";
-        $collums += 1;
-      }*/
-
-      }
-        echo "</ul>";
+        </ul>"
   }
 
 
