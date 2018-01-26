@@ -65,7 +65,7 @@ $collums = 0;
   }
 
 
-  echo "<table id=\"cartTable\">
+  /*echo "<table id=\"cartTable\">
   <tr>
     <th>Firstname</th>
     <th>Lastname</th>
@@ -82,7 +82,7 @@ $collums = 0;
     <td>94</td>
   </tr>
 </table>
-"
+"*/
 ?>
 
 </body>
