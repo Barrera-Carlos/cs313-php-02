@@ -40,9 +40,14 @@ $rows = 0;
 $collums = 0;
 
   if (is_array($_POST['Item'])) {
-    echo "<table>";
+    echo "<ul>";
     foreach($_POST['Item'] as $value){
-      if(($collums % 3) == 0 || $collums == 0)
+
+
+        $p = $itemDesctiption[$value];
+         echo "<li>$p</li>";
+
+      /*if(($collums % 3) == 0 || $collums == 0)
       {
         $p = $itemDesctiption[$value];
         echo "<tr> <td>$p</td> \n";
@@ -58,10 +63,10 @@ $collums = 0;
         $p = $itemDesctiption[$value];
         echo "<td>$p</td> \n";
         $collums += 1;
-      }
+      }*/
 
       }
-        echo "</table>";
+        echo "</ul>";
   }
 
 
