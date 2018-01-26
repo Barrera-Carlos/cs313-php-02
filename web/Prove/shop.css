@@ -8,7 +8,7 @@
 }
 
 
-.img {
+/*.img {
   background-image: url('imgS/IBO.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
   width: 100vw;
   height: 100vh;
   opacity: 1;
-}
+}*/
 
 div.desc {
     padding: 15px;
@@ -30,6 +30,13 @@ div.desc {
     left: 50%;
     transform: translate(-50%, -50%);
 }*/
+
+ul{
+    list-style: none
+}
+
+li:nth-child(even){background-color: #f2f2f2}
+
 table {
     border-collapse: collapse;
     width: 100%;
