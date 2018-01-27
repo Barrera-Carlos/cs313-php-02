@@ -74,6 +74,13 @@ $var = $_SESSION["list"];
         }
     }
 
+    $zip = $_POST["zip"];
+    echo "<h3>".$zip."</h3><br>";
+
+    foreach ($var as $item){
+        echo "<h3>".$item[1]."</h3><br>";
+    }
+
 
 ?>
 
