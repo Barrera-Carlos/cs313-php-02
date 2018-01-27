@@ -46,7 +46,8 @@ session_start();
     $wantedItems = array();
     $itemWanted = true;
 for($i = 0; $i < sizeof($var); $i++){
-    echo $var[1];
+    echo "<br>";
+    echo "<h1>".$var[$i][1]."</h1>";
 }
 
 echo sizeof($var);
