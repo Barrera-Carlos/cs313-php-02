@@ -14,28 +14,6 @@ session_start();
 
     <link rel="stylesheet" type="text/css" href="shop.css">
 
-    <script>
-        var savedId = [];
-    function remove(node) {
-        savedId.push(node.innerHTML);
-        node.parentNode.removeChild(node);
-    }
-
-    function returnSavedId() {
-        return JSON.stringify(savedId);
-    }
-    </script>
-
-    <style>
-    #UlistStyle{
-        list-style-type: none
-    }
-
-    #ListStyle:nth-child(even){
-         background-color: #f2f2f2
-    }
-    </style>
-
 </head>
 <html>
 <body>
@@ -83,6 +61,7 @@ $initialArray = array();
 
 echo "<form action=\"checkout.php\" method='post'>";
 if(isset($_SESSION["list"])){
+    echo "ninja";
     $structure = $_SESSION["list"];
     foreach ($structure as $item){
         array_push($initialArray,$item);
