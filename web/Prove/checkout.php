@@ -27,6 +27,6 @@ foreach ($var as $value){
 $_SESSION["list"] = $wantedItems;
 
 ?>
-
+<a href="shop.php">cart</a>
 </body>
 </html>
