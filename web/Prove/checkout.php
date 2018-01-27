@@ -9,9 +9,18 @@ session_start();
 <?php
 // Echo session variables that were set on previous page
 $var = $_SESSION["list"];
-foreach ($var as $value){
-    echo "<h1>".$value[1]."</h1><br>";
+$wantedItems = array();
+
+foreach ($_POST['remove'] as $item){
+    foreach ($var as $value){
+        if($item == $value[0]){
+            array_push($wantedItems,$value);
+            echo "<h1>".$value[1]."</h1><br>";
+        }
+    }
+    $_SESSION["list"] = $wantedItems;
 }
+
 ?>
 
 </body>

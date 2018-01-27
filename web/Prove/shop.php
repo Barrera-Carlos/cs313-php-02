@@ -91,7 +91,7 @@ if (is_array($_POST['Item'])) {
             {
                 array_push($initialArray,$itemDesctiption[$row]);
 
-                echo "<input type='checkbox' value='$itemDesctiption[$row][$gundamIdNumberLocation]'>".$itemDesctiption[$row][$gundamDescriptionLocation]."<br>";
+                echo "<input type='checkbox' name='remove[]' value='$itemDesctiption[$row][$gundamIdNumberLocation]'>".$itemDesctiption[$row][$gundamDescriptionLocation]."<br>";
 
                 $_SESSION["list"] = $initialArray;
             }
