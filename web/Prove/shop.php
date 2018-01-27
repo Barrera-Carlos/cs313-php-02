@@ -99,7 +99,7 @@ if (is_array($_POST['Item'])) {
         echo "</ul>";
   }
 
-echo "<a href=\"checkout.php\"  onclick=\"$removedID = submitForm()\">";
+echo "<a href=\"checkout.php\"  onclick=\"$removedID = submitForm()\">check out</a>";
  $_SESSION["removed"] = $removedID;
 ?>
 
