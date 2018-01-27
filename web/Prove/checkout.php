@@ -32,7 +32,7 @@ session_start();
                 <li class="active"><a href="Shop.html">Shop</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="shop.css" class="btn btn-inverse btn-lg">
+                <li><a href="shop.php" class="btn btn-inverse btn-lg">
                         <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
             </ul>
         </div>
