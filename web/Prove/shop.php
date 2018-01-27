@@ -71,7 +71,7 @@ $itemDesctiption = array(
                     }
                 }
             }
-            $_SESSION['list'] = $structure;
+            $_SESSION["list"] = $structure;
             foreach ($structure as $i){
                 $name = $i[$gundamIdNumberLocation];
                 echo "<input type='checkbox' name=\"Remove[]\" value=\"$name\">".$i[$gundamDescriptionLocation]."<br>";
@@ -85,9 +85,10 @@ $itemDesctiption = array(
                 #echo "<input type='checkbox' name=\"Remove[]\" value=\"$id\">".$item[$gundamDescriptionLocation]."<br>";
                 $count += 1;
             }
+            $_SESSION["list"] = $structure;
         }
     }
-    elseif (!empty($_POST['Item'])){
+    else{
         foreach($_POST['Item'] as $value){
             for($row = 0; $row < 6; $row++){
                 if($value == $itemDesctiption[$row][$gundamIdNumberLocation])

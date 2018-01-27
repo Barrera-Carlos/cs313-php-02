@@ -46,7 +46,7 @@ session_start();
     $wantedItems = array();
     $itemWanted = true;
 foreach ($var as $item){
-    echo "<h1>".$item[1]."</h1><br>";
+    echo "<h1>".$item[0]."</h1><br>";
 }
     /*if(!empty($_POST["Remove"]) and !empty($var)){
         foreach ($var as $value){
