@@ -94,7 +94,7 @@ if (is_array($_POST['Item'])) {
       }
         echo "</ul>";
   }
-    $_SESSION["removed"] = $itemDesctiption[$row][$gundamDescriptionLocation];
+    $_SESSION["removed"] = $itemDesctiption[0][$gundamIdNumberLocation];
     $in = $_SESSION["removed"];
 echo "<button onclick=''>".$in."</button>"
 
