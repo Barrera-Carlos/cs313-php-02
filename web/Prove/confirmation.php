@@ -40,7 +40,7 @@ $var = $_SESSION["list"];
     }
     else {
         $address = $_POST["address"];
-        if (!ctype_alnum($address)) {
+        if (preg_match("/[A-Za-z0-9 ]+/", $address)) {
             echo "<h3>Only letters and numbers are allowed</h3><br>";
         }
         else{
