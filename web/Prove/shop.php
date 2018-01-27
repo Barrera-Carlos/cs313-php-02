@@ -90,14 +90,13 @@ if (is_array($_POST['Item'])) {
             if($value == $itemDesctiption[$row][$gundamIdNumberLocation])
             {
                 array_push($initialArray,$itemDesctiption[$row]);
+                $id = $itemDesctiption[$row][$gundamIdNumberLocation];
+                echo "<input type='checkbox' name=\"Remove[]\" value=\"$id\">".$itemDesctiption[$row][$gundamDescriptionLocation]."<br>";
 
-                echo "<input type='checkbox' name='Remove[]' value=\"$itemDesctiption[$row][$gundamIdNumberLocation]\">".$itemDesctiption[$row][$gundamDescriptionLocation]."<br>";
-
-                $_SESSION["list"] = $initialArray;
             }
         }
-
     }
+    $_SESSION["list"] = $initialArray;
     echo "<input type='submit'></form>";
 
     /*echo "<ul id=\"UlistStyle\">";
