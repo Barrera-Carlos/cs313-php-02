@@ -45,9 +45,8 @@ session_start();
     $var = $_SESSION["list"];
     $wantedItems = array();
     $itemWanted = true;
-foreach ($var as $item){
-    echo "<h1>".$item[0]."</h1><br>";
-
+for($i = 0; $i < sizeof($var); i++){
+    echo $var[1];
 }
 
 echo sizeof($var);
