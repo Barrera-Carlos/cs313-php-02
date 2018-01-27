@@ -83,7 +83,6 @@ $initialArray = array();
 
 echo "<form action=\"checkout.php\" method='post'>";
 if(isset($_SESSION["list"])){
-    echo "goth boy click";
     $structure = $_SESSION["list"];
     foreach ($structure as $item){
         array_push($initialArray,$item);
