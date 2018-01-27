@@ -84,7 +84,23 @@ if (is_array($_POST['Item'])) {
     $initialArray = array();
     $_SESSION["list"];
 
-    echo "<ul id=\"UlistStyle\">";
+    echo "<form action=\"checkout.php\" method='post'>";
+    foreach($_POST['Item'] as $value){
+        for($row = 0; $row < 6; $row++){
+            if($value == $itemDesctiption[$row][$gundamIdNumberLocation])
+            {
+                array_push($initialArray,$itemDesctiption[$row]);
+
+                echo "<input type='checkbox' value='$itemDesctiption[$row][$gundamIdNumberLocation]'>".$itemDesctiption[$row][$gundamDescriptionLocation]."<br>";
+
+                $_SESSION["list"] = $initialArray;
+            }
+        }
+
+    }
+    echo "<input type='submit'></form>";
+
+    /*echo "<ul id=\"UlistStyle\">";
     foreach($_POST['Item'] as $value){
         for($row = 0; $row < 6; $row++){
             if($value == $itemDesctiption[$row][$gundamIdNumberLocation])
@@ -99,10 +115,10 @@ if (is_array($_POST['Item'])) {
         }
 
       }
-        echo "</ul>";
+        echo "</ul>";*/
   }
 
-echo "<a href=\"checkout.php\">check out</a>";
+/*echo "<a href=\"checkout.php\">check out</a>";*/
 ?>
 
 </body>
