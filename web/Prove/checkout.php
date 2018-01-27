@@ -8,7 +8,10 @@ session_start();
 
 <?php
 // Echo session variables that were set on previous page
-echo "Favorite color is " . $_SESSION["removed"] . ".";
+$var = $_SESSION["list"];
+foreach ($var as $value){
+    echo "<h1>".$value[1]."</h1><br>";
+}
 ?>
 
 </body>

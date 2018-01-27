@@ -82,6 +82,7 @@ if (is_array($_POST['Item'])) {
     $checkoutArray = array();
     $removedID = "";
     $initialArray = array();
+    $_SESSION["list"];
 
     echo "<ul id=\"UlistStyle\">";
     foreach($_POST['Item'] as $value){
@@ -92,6 +93,8 @@ if (is_array($_POST['Item'])) {
 
                 echo "<li id=\"ListStyle\">".$itemDesctiption[$row][$gundamDescriptionLocation].
                     "<button onclick=\" remove(this.parentNode)\">Remove this Item</button></li>";
+
+                $_SESSION["list"] = $initialArray;
             }
         }
 
@@ -99,8 +102,7 @@ if (is_array($_POST['Item'])) {
         echo "</ul>";
   }
 
-echo "<a href=\"checkout.php\"  onclick=\"$removedID = submitForm()\">check out</a>";
- $_SESSION["removed"] = $removedID;
+echo "<a href=\"checkout.php\">check out</a>";
 ?>
 
 </body>
