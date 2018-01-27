@@ -15,10 +15,14 @@ session_start();
     <link rel="stylesheet" type="text/css" href="shop.css">
 
     <script>
+        var savedId = [];
     function remove(node) {
-        var id = node.innerHTML;
+        savedId.push(node.innerHTML);
         node.parentNode.removeChild(node);
-        return id;
+    }
+
+    function returnSavedId() {
+        return JSON.stringify(savedId);
     }
     </script>
 
@@ -76,7 +80,7 @@ if (is_array($_POST['Item'])) {
     $gundamPriceLocation = 2;
     $totalPriceVar = 0;
     $checkoutArray = array();
-    $removedID;
+    $removedID = "";
     $initialArray = array();
 
     echo "<ul id=\"UlistStyle\">";
@@ -87,17 +91,16 @@ if (is_array($_POST['Item'])) {
                  array_push($initialArray,$itemDesctiption[$row]);
 
                 echo "<li id=\"ListStyle\">".$itemDesctiption[$row][$gundamDescriptionLocation].
-                    "<button onclick=\"$removedID = remove(this.parentNode)\">Remove this Item</button></li>";
+                    "<button onclick=\" remove(this.parentNode)\">Remove this Item</button></li>";
             }
         }
 
       }
         echo "</ul>";
   }
-    $_SESSION["removed"] = $itemDesctiption[0][$gundamIdNumberLocation];
-    $in = $_SESSION["removed"];
-echo "<button onclick=''>".$in."</button>"
 
+echo "<a href=\"checkout.php\"  onclick=\"$removedID = submitForm()\">";
+ $_SESSION["removed"] = $removedID;
 ?>
 
 </body>
