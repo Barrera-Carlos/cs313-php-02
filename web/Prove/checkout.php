@@ -1,8 +1,15 @@
+
 <?php
-/**
- * Created by PhpStorm.
- * User: Carlos
- * Date: 1/26/2018
- * Time: 7:48 PM
- */
-echo $_SESSION["removed"];
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+// Echo session variables that were set on previous page
+echo "Favorite color is " . $_SESSION["removed"] . ".";
+?>
+
+</body>
+</html>
