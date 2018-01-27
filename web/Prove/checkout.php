@@ -47,7 +47,10 @@ session_start();
     $itemWanted = true;
 foreach ($var as $item){
     echo "<h1>".$item[0]."</h1><br>";
+
 }
+
+echo sizeof($var);
     /*if(!empty($_POST["Remove"]) and !empty($var)){
         foreach ($var as $value){
             $itemWanted = true;
