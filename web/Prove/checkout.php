@@ -58,9 +58,8 @@ session_start();
                 echo "<h1>".$value[1]."</h1><br>";
             }
         }
-        if(!empty($wantedItems)){
             $_SESSION["list"] = $wantedItems;
-        }
+
     }
     elseif(empty($_POST["Remove"]) and !empty($var)){
         foreach ($var as $item){
