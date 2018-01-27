@@ -45,13 +45,13 @@ session_start();
     $var = $_SESSION["list"];
     $wantedItems = array();
     $itemWanted = true;
-for($i = 0; $i < sizeof($var); $i++){
+/*for($i = 0; $i < sizeof($var); $i++){
     echo "<br>";
     echo "<h1>".$var[$i][1]."</h1>";
 }
 
-echo sizeof($var);
-    /*if(!empty($_POST["Remove"]) and !empty($var)){
+echo sizeof($var);*/
+    if(!empty($_POST["Remove"]) and !empty($var)){
         foreach ($var as $value){
             $itemWanted = true;
             foreach ($_POST['Remove'] as $item){
@@ -74,7 +74,7 @@ echo sizeof($var);
     }
     else{
         echo "<h1>You have no items to checkout</h1><br>";
-    }*/
+    }
 
 
 ?>
