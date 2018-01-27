@@ -78,9 +78,12 @@ $itemDesctiption = array(
             }
         }
         else{
+            $count = 0;
             foreach ($structure as $item){
                 $id = $item[$gundamIdNumberLocation];
-                echo "<input type='checkbox' name=\"Remove[]\" value=\"$id\">".$item[$gundamDescriptionLocation]."<br>";
+                echo "<input type='checkbox' name=\"Remove[]\" value=\"$id\">".$count."<br>";
+                #echo "<input type='checkbox' name=\"Remove[]\" value=\"$id\">".$item[$gundamDescriptionLocation]."<br>";
+                $count += 1;
             }
         }
     }
