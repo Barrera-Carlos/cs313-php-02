@@ -11,7 +11,7 @@ session_start();
 $var = $_SESSION["list"];
 $wantedItems = array();
 
-foreach ($_POST['remove'] as $item){
+foreach ($_POST['Remove'] as $item){
     echo "<h1>".$item."</h1><br>";
     /*foreach ($var as $value){
         if($item == $value[0]){
