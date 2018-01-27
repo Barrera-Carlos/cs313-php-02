@@ -25,19 +25,6 @@ foreach ($var as $value){
     }
 }
 $_SESSION["list"] = $wantedItems;
-/*foreach ($_POST['Remove'] as $item){
-    foreach ($var as $value){
-        if($item == $value[0]){
-            $itemNotWanted = true;
-            array_push($wantedItems,$value);
-            echo "<h1>".$value[1]."</h1><br>";
-        }
-        if (!$itemNotWanted){
-
-        }
-    }
-    $_SESSION["list"] = $wantedItems;
-}*/
 
 ?>
 
