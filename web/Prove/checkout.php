@@ -45,7 +45,7 @@ session_start();
     $var = $_SESSION["list"];
     $wantedItems = array();
     $itemWanted = true;
-for($i = 0; $i < sizeof($var); i++){
+for($i = 0; $i < sizeof($var); $i++){
     echo $var[$i][1];
 }
 
