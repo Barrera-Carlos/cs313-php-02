@@ -72,12 +72,13 @@ session_start();
     <div class="container-fluid" id="shopItems">
         <div class="row">
             <div class="col-sm-6 col-centered text-center">
-                Name: <input type="text" name="name"><br>
-                E-mail: <input type="email" name="email"><br>
-                Address: <input type="text" name="address"><br>
-                City: <input type="text" name="city"><br>
-                State: <input type="text" name="state"><br>
-                Zip code: <input type="number" name="zip"><br>
+                <h3 style="text-align: center">Shipping information</h3>
+                Name: <input type="text" name="name"><br><br>
+                E-mail: <input type="email" name="email"><br><br>
+                Address: <input type="text" name="address"><br><br>
+                City: <input type="text" name="city"><br><br>
+                State: <input type="text" name="state"><br><br>
+                Zip code: <input type="number" name="zip"><br><br>
                 <input type="submit" value="Purchase">
             </div>
         </div>
