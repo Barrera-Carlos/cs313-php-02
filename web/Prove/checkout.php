@@ -67,14 +67,21 @@ session_start();
 
 ?>
 
+
 <form method="post" action="confirmation.php">
-    Name: <input type="text" name="name"><br>
-    E-mail: <input type="email" name="email"><br>
-    Address: <input type="text" name="address"><br>
-    City: <input type="text" name="city"><br>
-    State: <input type="text" name="state"><br>
-    Zip code: <input type="number" name="zip"><br>
-    <input type="submit" value="Purchase">
+    <div class="container-fluid" id="shopItems">
+        <div class="row">
+            <div class="col-sm-6 col-centered text-center">
+                Name: <input type="text" name="name"><br>
+                E-mail: <input type="email" name="email"><br>
+                Address: <input type="text" name="address"><br>
+                City: <input type="text" name="city"><br>
+                State: <input type="text" name="state"><br>
+                Zip code: <input type="number" name="zip"><br>
+                <input type="submit" value="Purchase">
+            </div>
+        </div>
+    </div>
 </form>
 
 </body>
