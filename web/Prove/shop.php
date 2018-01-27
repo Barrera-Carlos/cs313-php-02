@@ -59,8 +59,8 @@ $itemDesctiption = array(
 
 
     echo "<form action=\"checkout.php\" method='post'>";
+echo "<p>Please use the checkbox to remove items from your shopping cart</p>";
     if(!empty($_SESSION["list"])){
-        echo "ninja<br>";
         $structure = $_SESSION["list"];
         if(!empty($_POST['Item']))
         {
