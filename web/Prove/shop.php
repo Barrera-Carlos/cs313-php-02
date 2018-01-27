@@ -16,7 +16,9 @@ session_start();
 
     <script>
     function remove(node) {
+        var id = node.innerHTML;
         node.parentNode.removeChild(node);
+        return id;
     }
     </script>
 
@@ -68,29 +70,33 @@ $itemDesctiption = array(
 
 
 if (is_array($_POST['Item'])) {
-    $_SESSION["totalPrice"] = 0;
+    /*$_SESSION["totalPrice"] = 0;*/
     $gundamIdNumberLocation = 0;
     $gundamDescriptionLocation = 1;
     $gundamPriceLocation = 2;
     $totalPriceVar = 0;
+    $checkoutArray = array();
+    $removedID;
+    $initialArray = array();
 
     echo "<ul id=\"UlistStyle\">";
     foreach($_POST['Item'] as $value){
         for($row = 0; $row < 6; $row++){
             if($value == $itemDesctiption[$row][$gundamIdNumberLocation])
             {
-                echo "<li id=\"ListStyle\">".$itemDesctiption[$row][$gundamDescriptionLocation].
-                    "<button onclick=\"remove(this.parentNode)\">Remove this Item</button></li>";
+                 array_push($initialArray,$itemDesctiption[$row]);
 
-                $totalPriceVar += $itemDesctiption[$row][$gundamPriceLocation];
+                echo "<li id=\"ListStyle\">".$itemDesctiption[$row][$gundamDescriptionLocation].
+                    "<button onclick=\"$removedID = remove(this.parentNode)\">Remove this Item</button></li>";
             }
         }
 
       }
         echo "</ul>";
   }
-
-echo "<button onclick='$totalPriceVar'>".$totalPriceVar."</button>"
+    $_SESSION["removed"] = $itemDesctiption[$row][$gundamDescriptionLocation];
+    $in = $_SESSION["removed"];
+echo "<button onclick=''>$in</button>"
 
 ?>
 
