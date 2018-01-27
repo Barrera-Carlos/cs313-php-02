@@ -58,9 +58,18 @@ session_start();
                 echo "<h1>".$value[1]."</h1><br>";
             }
         }
-        $_SESSION["list"] = $wantedItems;
+        if(!empty($wantedItems)){
+            $_SESSION["list"] = $wantedItems;
+        }
     }
-
+    elseif(empty($_POST["Remove"]) and !empty($var)){
+        foreach ($var as $item){
+            echo "<h1>".$item[1]."</h1><br>";
+        }
+    }
+    else{
+        echo "<h1>You have no items to checkout</h1><br>";
+    }
 
 
 ?>
