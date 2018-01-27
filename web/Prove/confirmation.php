@@ -27,7 +27,7 @@ $var = $_SESSION["list"];
     }
     else {
         $name = $_POST["name"];
-        if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
+        if (!preg_match("/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/", $name)) {
             echo "<h3>Only letters and white space allowed</h3><br>";
         }
         else{
