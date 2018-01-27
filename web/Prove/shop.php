@@ -48,7 +48,7 @@ $itemDesctiption = array(
         array("5","Kimaris vidar $23.99",23.99));
 
 
-if(isset($_POST['Item'])){
+
     $gundamIdNumberLocation = 0;
     $gundamDescriptionLocation = 1;
     $gundamPriceLocation = 2;
@@ -56,20 +56,35 @@ if(isset($_POST['Item'])){
     $checkoutArray = array();
     $removedID = "";
     $initialArray = array();
-#$_SESSION["list"];
 
 
     echo "<form action=\"checkout.php\" method='post'>";
-    if(isset($_SESSION["list"])){
+    if(!empty($_SESSION["list"])){
         echo "ninja<br>";
         $structure = $_SESSION["list"];
-        foreach ($structure as $item){
-            array_push($initialArray,$item);
-            $id = $item[$gundamIdNumberLocation];
-            echo "<input type='checkbox' name=\"Remove[]\" value=\"$id\">".$item[$gundamDescriptionLocation]."<br>";
+        if(!empty($_POST['Item']))
+        {
+            foreach ($_POST['Item'] as $id){
+                foreach ($itemDesctiption as $description){
+                    if($id == $description[0]){
+                        array_push($structure,$description);
+                    }
+                }
+            }
+            $_SESSION['list'] = $structure;
+            foreach ($structure as $i){
+                $name = $i[$gundamIdNumberLocation];
+                echo "<input type='checkbox' name=\"Remove[]\" value=\"$name\">".$i[$gundamDescriptionLocation]."<br>";
+            }
+        }
+        else{
+            foreach ($structure as $item){
+                $id = $item[$gundamIdNumberLocation];
+                echo "<input type='checkbox' name=\"Remove[]\" value=\"$id\">".$item[$gundamDescriptionLocation]."<br>";
+            }
         }
     }
-    else{
+    elseif (!empty($_POST['Item'])){
         foreach($_POST['Item'] as $value){
             for($row = 0; $row < 6; $row++){
                 if($value == $itemDesctiption[$row][$gundamIdNumberLocation])
@@ -80,11 +95,12 @@ if(isset($_POST['Item'])){
                 }
             }
         }
+        $_SESSION["list"] = $initialArray;
     }
-    $_SESSION["list"] = $initialArray;
+
     echo "<input type='submit'></form>";
 
-}
+
 
 ?>
 
