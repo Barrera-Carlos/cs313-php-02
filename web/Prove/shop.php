@@ -90,7 +90,7 @@ if (is_array($_POST['Item'])) {
         echo "</ul>";
   }
 
-echo "<button>".$totalPriceVar."</button>"
+echo "<button onclick='$totalPriceVar'>".$totalPriceVar."</button>"
 
 ?>
 
