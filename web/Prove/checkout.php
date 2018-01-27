@@ -45,12 +45,7 @@ session_start();
     $var = $_SESSION["list"];
     $wantedItems = array();
     $itemWanted = true;
-/*for($i = 0; $i < sizeof($var); $i++){
-    echo "<br>";
-    echo "<h1>".$var[$i][1]."</h1>";
-}
 
-echo sizeof($var);*/
     if(!empty($_POST["Remove"]) and !empty($var)){
         foreach ($var as $value){
             $itemWanted = true;
@@ -61,23 +56,26 @@ echo sizeof($var);*/
             }
             if($itemWanted){
                 array_push($wantedItems,$value);
-                echo "<h1>".$value[1]."</h1><br>";
             }
         }
             $_SESSION["list"] = $wantedItems;
 
     }
-    elseif(empty($_POST["Remove"]) and !empty($var)){
-        foreach ($var as $item){
-            echo "<h1>".$item[1]."</h1><br>";
-        }
-    }
     else{
         echo "<h1>You have no items to checkout</h1><br>";
     }
 
-
 ?>
-<a href="shop.php">cart</a>
+
+<form method="post" action="confirmation.php">
+    Name: <input type="text" name="name"><br>
+    E-mail: <input type="email" name="email"><br>
+    Address: <input type="text" name="address"><br>
+    City: <input type="text" name="city"><br>
+    State: <input type="text" name="state"><br>
+    Zip code: <input type="number" name="zip"><br>
+    <input type="submit" value="Purchase">
+</form>
+
 </body>
 </html>
